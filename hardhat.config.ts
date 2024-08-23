@@ -1,175 +1,71 @@
-import dotenv from "dotenv";
-import "@nomicfoundation/hardhat-toolbox";
-// import * as tenderly from "@tenderly/hardhat-tenderly";
-
-import "hardhat-contract-sizer";
-import "hardhat-gas-reporter";
-
 import { HardhatUserConfig } from "hardhat/config";
+import "@nomicfoundation/hardhat-toolbox";
+import * as tenderly from "@tenderly/hardhat-tenderly";
+import yargs from "yargs";
+import dotenv from "dotenv";
+import "hardhat-deploy";
 import type { HttpNetworkUserConfig } from "hardhat/types";
 
-import "./tasks/deploy-adapters";
-import "./tasks/deploy-mastercopy";
-import "./tasks/deploy-proxy";
-import "./tasks/deploy-standalone";
+tenderly.setup({ automaticVerifications: true });
+
+const argv = yargs
+    .option("network", {
+        type: "string",
+        default: "hardhat",
+    })
+    .help(false)
+    .version(false).argv;
 
 // Load environment variables.
-// tenderly.setup({ automaticVerifications: true });
 dotenv.config();
-const {
-  INFURA_KEY,
-  PK,
-  MNEMONIC,
-  ETHERSCAN_API_KEY,
-  OPTIMISTIC_ETHERSCAN_API_KEY,
-  GNOSISSCAN_API_KEY,
-  POLYGONSCAN_API_KEY,
-  ARBISCAN_API_KEY,
-  SNOWTRACE_API_KEY,
-} = process.env;
+
+const { INFURA_KEY, MNEMONIC, ETHERSCAN_API_KEY, PK, PK_ADDR, LEDGER_ADDRESS, WALLET_PK_1, WALLET_PK_2, WALLET_PK_3, WALLET_PK_4, WALLET_PK_5, WALLET_PK_6, WALLET_PK_7, WALLET_PK_8, WALLET_PK_9, WALLET_PK_10, VIRTUAL_MAINNET_RPC, TENDERLY_PROJECT_ID, TENDERLY_ACCOUNT } = process.env;
+
 
 const sharedNetworkConfig: HttpNetworkUserConfig = {};
 if (PK) {
-  sharedNetworkConfig.accounts = [PK];
-} else {
-  sharedNetworkConfig.accounts = {
-    mnemonic:
-      MNEMONIC ||
-      "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat",
-  };
+    (sharedNetworkConfig.accounts as any) = [PK, WALLET_PK_1, WALLET_PK_2, WALLET_PK_3, WALLET_PK_4, WALLET_PK_5, WALLET_PK_6, WALLET_PK_7, WALLET_PK_8, WALLET_PK_9, WALLET_PK_10];
+    // sharedNetworkConfig.accounts = [PK];
 }
 
 const config: HardhatUserConfig = {
-  paths: {
-    artifacts: "build/artifacts",
-    cache: "build/cache",
-    sources: "contracts",
-  },
-  solidity: {
-    compilers: [
-      {
-        version: "0.8.21",
+    paths: {
+        artifacts: "build/artifacts",
+        cache: "build/cache",
+        deploy: "src/deploy",
+        sources: "contracts",
+    },
+    solidity: {
+        compilers: [{ version: "0.8.6" }, { version: "0.6.12" }],
         settings: {
-          evmVersion: "shanghai",
-          optimizer: {
-            enabled: true,
-            runs: 100,
-          },
+            optimizer: {
+                enabled: true,
+                runs: 1,
+            },
         },
-      },
-      { version: "0.8.6" },
-      { version: "0.6.12" },
-      { version: "0.8.17" },
-      { version: "0.8.20" },
-    ],
-  },
-  networks: {
-    hardhat: {
-      forking: {
-        url: "https://eth-mainnet.g.alchemy.com/v2/SqoCsRkBdmlaxpfOaLS3QXOxiQ7BQ1dz",
-      },
-      allowUnlimitedContractSize: true,
     },
-    mainnet: {
-      ...sharedNetworkConfig,
-      chainId: 1,
-      url: `https://mainnet.infura.io/v3/${INFURA_KEY}`,
-    },
-    optimism: {
-      ...sharedNetworkConfig,
-      chainId: 10,
-      url: "https://mainnet.optimism.io",
-    },
-    gnosis: {
-      ...sharedNetworkConfig,
-      chainId: 100,
-      url: "https://rpc.gnosischain.com",
-    },
-    sepolia: {
-      ...sharedNetworkConfig,
-      chainId: 11155111,
-      url: `https://sepolia.infura.io/v3/${INFURA_KEY}`,
-    },
-    matic: {
-      ...sharedNetworkConfig,
-      chainId: 137,
-      url: "https://rpc-mainnet.maticvigil.com",
-    },
-    arbitrum: {
-      ...sharedNetworkConfig,
-      chainId: 42161,
-      url: "https://arb1.arbitrum.io/rpc",
-    },
-    avalanche: {
-      ...sharedNetworkConfig,
-      chainId: 43114,
-      url: "https://rpc.ankr.com/avalanche",
-    },
-  },
-  tenderly: {
-    // https://docs.tenderly.co/account/projects/account-project-slug
-    project: process.env.TENDERLY_PROJECT_ID as string,
-    username: process.env.TENDERLY_ACCOUNT as string,
-  },
-  etherscan: {
-    apiKey: {
-      mainnet: ETHERSCAN_API_KEY,
-      sepolia: ETHERSCAN_API_KEY,
-      optimism: OPTIMISTIC_ETHERSCAN_API_KEY,
-      gnosis: GNOSISSCAN_API_KEY,
-      matic: POLYGONSCAN_API_KEY,
-      arbitrum: ARBISCAN_API_KEY,
-      avalanche: SNOWTRACE_API_KEY,
-    } as Record<string, string>,
-    customChains: [
-      {
-        network: "optimism",
-        chainId: 10,
-        urls: {
-          apiURL: "https://api-optimistic.etherscan.io/api",
-          browserURL: "https://optimistic.etherscan.io",
+    networks: {
+        virtual_mainnet: {
+            ...sharedNetworkConfig,
+            url: VIRTUAL_MAINNET_RPC,
+            chainId: 31337,
+            // currency: "VETH"
+            // ledgerAccounts: [
+            //     LEDGER_ADDRESS as string
+            // ]
         },
-      },
-      {
-        network: "gnosis",
-        chainId: 100,
-        urls: {
-          apiURL: "https://api.gnosisscan.io/api",
-          browserURL: "https://www.gnosisscan.io",
-        },
-      },
-      {
-        network: "matic",
-        chainId: 137,
-        urls: {
-          apiURL: "https://api.polygonscan.com/api",
-          browserURL: "https://www.polygonscan.com",
-        },
-      },
-      {
-        network: "arbitrum",
-        chainId: 42161,
-        urls: {
-          apiURL: "https://api.arbiscan.io/api",
-          browserURL: "https://www.arbiscan.io",
-        },
-      },
-      {
-        network: "avalanche",
-        chainId: 43114,
-        urls: {
-          apiURL: "https://api.snowtrace.io/api",
-          browserURL: "https://www.snowtrace.io",
-        },
-      },
-    ],
-  },
-  gasReporter: {
-    enabled: true,
-  },
-  mocha: {
-    timeout: 2000000,
-  },
+    },
+    tenderly: {
+        // https://docs.tenderly.co/account/projects/account-project-slug
+        project: TENDERLY_PROJECT_ID as string,
+        username: TENDERLY_ACCOUNT as string,
+    },
+    namedAccounts: {
+        deployer: 0,
+    },
+    mocha: {
+        timeout: 2000000,
+    },
 };
 
 export default config;
