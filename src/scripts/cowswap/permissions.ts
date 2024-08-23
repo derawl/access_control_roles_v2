@@ -124,7 +124,7 @@ export const buildScopeTxs = async (
         compValue: "0x",
       },
     ],
-    ExecutionOptions.None,
+    ExecutionOptions.Both,
   );
 
   txs.push(tx);
