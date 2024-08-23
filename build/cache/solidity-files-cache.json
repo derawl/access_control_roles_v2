@@ -1,0 +1,3955 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\adapters\\AvatarIsOwnerOfERC721.sol": {
+      "lastModificationDate": 1724320418006,
+      "contentHash": "ab8731b8203d8718b5572dafe42b3d7f",
+      "sourceName": "contracts/adapters/AvatarIsOwnerOfERC721.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/interfaces/IERC721.sol",
+        "./Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "AvatarIsOwnerOfERC721",
+        "IModifier"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\adapters\\Types.sol": {
+      "lastModificationDate": 1724320418009,
+      "contentHash": "641d43e2232355b41def9e5dba7c46d1",
+      "sourceName": "contracts/adapters/Types.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/safe-contracts/contracts/common/Enum.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "ICustomCondition",
+        "IMultiSend",
+        "ITransactionUnwrapper"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts\\interfaces\\IERC721.sol": {
+      "lastModificationDate": 1724323841794,
+      "contentHash": "d8d23fc2f55ed934d1a1b91c9afd8526",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../token/ERC721/IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": []
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@gnosis.pm\\safe-contracts\\contracts\\common\\Enum.sol": {
+      "lastModificationDate": 1724323842010,
+      "contentHash": "70d93d6b3e8b23f419fe3e529a43c17e",
+      "sourceName": "@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "Enum"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721.sol": {
+      "lastModificationDate": 1724323841970,
+      "contentHash": "5df8fdb527e563085847cad29e3c5f2e",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol": {
+      "lastModificationDate": 1724323841537,
+      "contentHash": "de0163561b417b800d01749cbbe2147e",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\extensions\\IERC721Metadata.sol": {
+      "lastModificationDate": 1724323841956,
+      "contentHash": "12c206f185cb951213799561fdcaa40d",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol": {
+      "lastModificationDate": 1724323841901,
+      "contentHash": "1e64e2ad597dc5b2dae11346502baad4",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol",
+        "./IERC721Receiver.sol",
+        "./extensions/IERC721Metadata.sol",
+        "../../utils/Context.sol",
+        "../../utils/Strings.sol",
+        "../../utils/introspection/ERC165.sol",
+        "../../interfaces/draft-IERC6093.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC721"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1724323840623,
+      "contentHash": "01c847e2af51f468cb66d9ed83bc3cec",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
+      "lastModificationDate": 1724323841653,
+      "contentHash": "ba57ff4ddf1d9cae9d2009792795b7f6",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./math/Math.sol",
+        "./math/SignedMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts\\interfaces\\draft-IERC6093.sol": {
+      "lastModificationDate": 1724323841721,
+      "contentHash": "4aefc698f77ecbace7f401257dfe182d",
+      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1155Errors",
+        "IERC20Errors",
+        "IERC721Errors"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol": {
+      "lastModificationDate": 1724323841981,
+      "contentHash": "fc8a9841f4bdd6329c26a00d5e75f4b3",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol": {
+      "lastModificationDate": 1724323841526,
+      "contentHash": "6a55c353946e471d9792965d06208295",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts\\utils\\math\\Math.sol": {
+      "lastModificationDate": 1724323841597,
+      "contentHash": "718fa8ba0ff269c92e364c1429d9de57",
+      "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SignedMath.sol": {
+      "lastModificationDate": 1724323841639,
+      "contentHash": "b6c6bdc7aaca4fe5b680760a72e09d3e",
+      "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SignedMath"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\test\\MockERC721.sol": {
+      "lastModificationDate": 1724320418017,
+      "contentHash": "1b7c22d3e573bb4f981409e788c70bb6",
+      "sourceName": "contracts/test/MockERC721.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MockERC721"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\test\\TestCustomChecker.sol": {
+      "lastModificationDate": 1724320418022,
+      "contentHash": "ad90d99955bbf3115e79893f56bddf8b",
+      "sourceName": "contracts/test/TestCustomChecker.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../adapters/Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "TestCustomChecker"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\Periphery.sol": {
+      "lastModificationDate": 1724320417996,
+      "contentHash": "bc7d198e86768cf612c2fa2972862a1b",
+      "sourceName": "contracts/Periphery.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "./adapters/Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Periphery"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol": {
+      "lastModificationDate": 1724323841680,
+      "contentHash": "77d30f3cd93f46b80b6f8f1ebc574ee4",
+      "sourceName": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/ContextUpgradeable.sol",
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "OwnableUpgradeable"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol": {
+      "lastModificationDate": 1724323841844,
+      "contentHash": "0c3c7a637fd6a91b3f5eb94fb6e9fc1f",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ContextUpgradeable"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol": {
+      "lastModificationDate": 1724323841747,
+      "contentHash": "f0cedd674b4863ee90d1521a92ab82df",
+      "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\PermissionChecker.sol": {
+      "lastModificationDate": 1724320417998,
+      "contentHash": "68879c68fd3c3444c4cbd2e60df7c02c",
+      "sourceName": "contracts/PermissionChecker.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "./Consumptions.sol",
+        "./Core.sol",
+        "./Decoder.sol",
+        "./Periphery.sol",
+        "./packers/BufferPacker.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "PermissionChecker"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\Consumptions.sol": {
+      "lastModificationDate": 1724320417992,
+      "contentHash": "be5e3502f7db390ccb7eda60b60beaf5",
+      "sourceName": "contracts/Consumptions.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Consumptions"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\Core.sol": {
+      "lastModificationDate": 1724320417993,
+      "contentHash": "76bec4cb4a8d38cd52e866f868f98991",
+      "sourceName": "contracts/Core.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/zodiac/contracts/core/Modifier.sol",
+        "./Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Core"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\Decoder.sol": {
+      "lastModificationDate": 1724320417993,
+      "contentHash": "19d074ed2a019bade50f523ab343d2cd",
+      "sourceName": "contracts/Decoder.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Topology.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Decoder"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\packers\\BufferPacker.sol": {
+      "lastModificationDate": 1724320418011,
+      "contentHash": "e319a8ff86cc6a2956ab08304ce47a59",
+      "sourceName": "contracts/packers/BufferPacker.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "BufferPacker"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\Types.sol": {
+      "lastModificationDate": 1724320418003,
+      "contentHash": "b11b87191fb23a455b7c7a1d1854b615",
+      "sourceName": "contracts/Types.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": []
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\core\\Modifier.sol": {
+      "lastModificationDate": 1724323854210,
+      "contentHash": "92e76584b9bb923d2ba24dbb71ee3c2b",
+      "sourceName": "@gnosis.pm/zodiac/contracts/core/Modifier.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "../signature/ExecutionTracker.sol",
+        "../interfaces/IAvatar.sol",
+        "./Module.sol",
+        "../signature/SignatureChecker.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "Modifier"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\signature\\ExecutionTracker.sol": {
+      "lastModificationDate": 1724323854222,
+      "contentHash": "93e293faf4a22fa3227d95c43675b020",
+      "sourceName": "@gnosis.pm/zodiac/contracts/signature/ExecutionTracker.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0 <0.9.0"
+      ],
+      "artifacts": [
+        "ExecutionTracker"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\core\\Module.sol": {
+      "lastModificationDate": 1724323854211,
+      "contentHash": "18b06280572ff4651effdbfb102557f6",
+      "sourceName": "@gnosis.pm/zodiac/contracts/core/Module.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "../factory/FactoryFriendly.sol",
+        "../interfaces/IAvatar.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "Module"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\interfaces\\IAvatar.sol": {
+      "lastModificationDate": 1724323854220,
+      "contentHash": "03ec15fe4a0456cdcdf19cd95b2a8348",
+      "sourceName": "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/safe-contracts/contracts/common/Enum.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "IAvatar"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\signature\\SignatureChecker.sol": {
+      "lastModificationDate": 1724323854239,
+      "contentHash": "563e013cb7faeffaf88a6fac40552286",
+      "sourceName": "@gnosis.pm/zodiac/contracts/signature/SignatureChecker.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC1271.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.0 <0.9.0"
+      ],
+      "artifacts": [
+        "SignatureChecker"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\factory\\FactoryFriendly.sol": {
+      "lastModificationDate": 1724323854213,
+      "contentHash": "076d81c74d4af7a307bce839aafaa7c2",
+      "sourceName": "@gnosis.pm/zodiac/contracts/factory/FactoryFriendly.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "FactoryFriendly"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\signature\\IERC1271.sol": {
+      "lastModificationDate": 1724323854223,
+      "contentHash": "9fd6f34a1880b94f0526edb596c0df72",
+      "sourceName": "@gnosis.pm/zodiac/contracts/signature/IERC1271.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "IERC1271"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\Topology.sol": {
+      "lastModificationDate": 1724320418002,
+      "contentHash": "58209a4b801b6b1d6ef1d1249218a456",
+      "sourceName": "contracts/Topology.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Topology"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\Roles.sol": {
+      "lastModificationDate": 1724320418001,
+      "contentHash": "572fe2f4670b7f486894e156b2554161",
+      "sourceName": "contracts/Roles.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./AllowanceTracker.sol",
+        "./PermissionBuilder.sol",
+        "./PermissionChecker.sol",
+        "./PermissionLoader.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Roles"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\AllowanceTracker.sol": {
+      "lastModificationDate": 1724320417990,
+      "contentHash": "317aef30a9565b198bb85acaf88faef4",
+      "sourceName": "contracts/AllowanceTracker.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Core.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "AllowanceTracker"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\PermissionBuilder.sol": {
+      "lastModificationDate": 1724320417997,
+      "contentHash": "8cdaff0e49d4355205e412490455528d",
+      "sourceName": "contracts/PermissionBuilder.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Core.sol",
+        "./Integrity.sol",
+        "./packers/BufferPacker.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "PermissionBuilder"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\PermissionLoader.sol": {
+      "lastModificationDate": 1724320418000,
+      "contentHash": "a78f0d838303ed0670c702bdef248ac3",
+      "sourceName": "contracts/PermissionLoader.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/zodiac/contracts/core/Modifier.sol",
+        "./Consumptions.sol",
+        "./Core.sol",
+        "./Topology.sol",
+        "./WriteOnce.sol",
+        "./packers/Packer.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "PermissionLoader"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\Integrity.sol": {
+      "lastModificationDate": 1724320417994,
+      "contentHash": "4baf9adfcee3dca55a7bd384ebf79779",
+      "sourceName": "contracts/Integrity.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Topology.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Integrity"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\WriteOnce.sol": {
+      "lastModificationDate": 1724320418004,
+      "contentHash": "cb5f71842fee0990106fc2eaf7e7e98b",
+      "sourceName": "contracts/WriteOnce.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "ISingletonFactory",
+        "WriteOnce"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\packers\\Packer.sol": {
+      "lastModificationDate": 1724320418013,
+      "contentHash": "337028e19f908f9fbaeda9d06e4959ac",
+      "sourceName": "contracts/packers/Packer.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/zodiac/contracts/core/Modifier.sol",
+        "./BufferPacker.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Packer"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\test\\MockIntegrity.sol": {
+      "lastModificationDate": 1724320418018,
+      "contentHash": "ac36b3d11d6000eacd62741ee2ce13a1",
+      "sourceName": "contracts/test/MockIntegrity.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Integrity.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "MockIntegrity"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\test\\MockConsumptions.sol": {
+      "lastModificationDate": 1724320418015,
+      "contentHash": "deb9afe44d486ae389ea1026c540a375",
+      "sourceName": "contracts/test/MockConsumptions.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Consumptions.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "MockConsumptions"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\test\\MockDecoder.sol": {
+      "lastModificationDate": 1724320418016,
+      "contentHash": "d58d8014e74c2d6c4a33c213921b7a89",
+      "sourceName": "contracts/test/MockDecoder.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Decoder.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "MockDecoder"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\adapters\\MultiSendUnwrapper.sol": {
+      "lastModificationDate": 1724320418007,
+      "contentHash": "19425164856708374b274f03855f8163",
+      "sourceName": "contracts/adapters/MultiSendUnwrapper.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "MultiSendUnwrapper"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\test\\MultiSend.sol": {
+      "lastModificationDate": 1724320418019,
+      "contentHash": "f085181a9b6c843f2f8fed446f5459f5",
+      "sourceName": "contracts/test/MultiSend.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "MultiSend"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\test\\TestAvatar.sol": {
+      "lastModificationDate": 1724320418020,
+      "contentHash": "c15beec61a98e1409f0ce62461aafae4",
+      "sourceName": "contracts/test/TestAvatar.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "TestAvatar"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\test\\TestContract.sol": {
+      "lastModificationDate": 1724320418021,
+      "contentHash": "9b81b83c3fa10de7550abb5e24b7b2a2",
+      "sourceName": "contracts/test/TestContract.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "TestContract"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\test\\TestEncoder.sol": {
+      "lastModificationDate": 1724320418024,
+      "contentHash": "9551a7b033f716fb9a2ac71f21fc7827",
+      "sourceName": "contracts/test/TestEncoder.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "TestEncoder"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\contracts\\test\\TestFactory.sol": {
+      "lastModificationDate": 1724320418024,
+      "contentHash": "7dc2c9e3a3cc2523eefd7e211c15482e",
+      "sourceName": "contracts/test/TestFactory.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/zodiac/contracts/factory/ModuleProxyFactory.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": []
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\roles-v2-access-control\\packages\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\factory\\ModuleProxyFactory.sol": {
+      "lastModificationDate": 1724323854214,
+      "contentHash": "83271d192e0e48adee9c19f329517fb2",
+      "sourceName": "@gnosis.pm/zodiac/contracts/factory/ModuleProxyFactory.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "ModuleProxyFactory"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\adapters\\AvatarIsOwnerOfERC721.sol": {
+      "lastModificationDate": 1724320418006,
+      "contentHash": "ab8731b8203d8718b5572dafe42b3d7f",
+      "sourceName": "contracts/adapters/AvatarIsOwnerOfERC721.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/interfaces/IERC721.sol",
+        "./Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "AvatarIsOwnerOfERC721",
+        "IModifier"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\adapters\\Types.sol": {
+      "lastModificationDate": 1724320418009,
+      "contentHash": "641d43e2232355b41def9e5dba7c46d1",
+      "sourceName": "contracts/adapters/Types.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/safe-contracts/contracts/common/Enum.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "ICustomCondition",
+        "IMultiSend",
+        "ITransactionUnwrapper"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts\\interfaces\\IERC721.sol": {
+      "lastModificationDate": 1724348137808,
+      "contentHash": "d8d23fc2f55ed934d1a1b91c9afd8526",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../token/ERC721/IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": []
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@gnosis.pm\\safe-contracts\\contracts\\common\\Enum.sol": {
+      "lastModificationDate": 1718191795432,
+      "contentHash": "70d93d6b3e8b23f419fe3e529a43c17e",
+      "sourceName": "@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "Enum"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721.sol": {
+      "lastModificationDate": 1724348137810,
+      "contentHash": "5df8fdb527e563085847cad29e3c5f2e",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol": {
+      "lastModificationDate": 1724348137757,
+      "contentHash": "de0163561b417b800d01749cbbe2147e",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\extensions\\IERC721Metadata.sol": {
+      "lastModificationDate": 1724348137818,
+      "contentHash": "12c206f185cb951213799561fdcaa40d",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol": {
+      "lastModificationDate": 1724348137674,
+      "contentHash": "1e64e2ad597dc5b2dae11346502baad4",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol",
+        "./IERC721Receiver.sol",
+        "./extensions/IERC721Metadata.sol",
+        "../../utils/Context.sol",
+        "../../utils/Strings.sol",
+        "../../utils/introspection/ERC165.sol",
+        "../../interfaces/draft-IERC6093.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC721"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1724348137590,
+      "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
+      "lastModificationDate": 1724348137873,
+      "contentHash": "ba57ff4ddf1d9cae9d2009792795b7f6",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./math/Math.sol",
+        "./math/SignedMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts\\interfaces\\draft-IERC6093.sol": {
+      "lastModificationDate": 1724348137602,
+      "contentHash": "4aefc698f77ecbace7f401257dfe182d",
+      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1155Errors",
+        "IERC20Errors",
+        "IERC721Errors"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol": {
+      "lastModificationDate": 1724348137824,
+      "contentHash": "fc8a9841f4bdd6329c26a00d5e75f4b3",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol": {
+      "lastModificationDate": 1724348137631,
+      "contentHash": "6a55c353946e471d9792965d06208295",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts\\utils\\math\\Math.sol": {
+      "lastModificationDate": 1724348137840,
+      "contentHash": "718fa8ba0ff269c92e364c1429d9de57",
+      "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SignedMath.sol": {
+      "lastModificationDate": 1724348137861,
+      "contentHash": "b6c6bdc7aaca4fe5b680760a72e09d3e",
+      "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SignedMath"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\test\\MockERC721.sol": {
+      "lastModificationDate": 1724320418017,
+      "contentHash": "1b7c22d3e573bb4f981409e788c70bb6",
+      "sourceName": "contracts/test/MockERC721.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MockERC721"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\test\\TestCustomChecker.sol": {
+      "lastModificationDate": 1724320418022,
+      "contentHash": "ad90d99955bbf3115e79893f56bddf8b",
+      "sourceName": "contracts/test/TestCustomChecker.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../adapters/Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "TestCustomChecker"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\Periphery.sol": {
+      "lastModificationDate": 1724320417996,
+      "contentHash": "bc7d198e86768cf612c2fa2972862a1b",
+      "sourceName": "contracts/Periphery.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "./adapters/Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Periphery"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol": {
+      "lastModificationDate": 1724348125158,
+      "contentHash": "77d30f3cd93f46b80b6f8f1ebc574ee4",
+      "sourceName": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/ContextUpgradeable.sol",
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "OwnableUpgradeable"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol": {
+      "lastModificationDate": 1724348125066,
+      "contentHash": "c28aaa25d083a9a55bd9ec9e0b785122",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ContextUpgradeable"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol": {
+      "lastModificationDate": 1724348125150,
+      "contentHash": "f0cedd674b4863ee90d1521a92ab82df",
+      "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\PermissionChecker.sol": {
+      "lastModificationDate": 1724320417998,
+      "contentHash": "68879c68fd3c3444c4cbd2e60df7c02c",
+      "sourceName": "contracts/PermissionChecker.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "./Consumptions.sol",
+        "./Core.sol",
+        "./Decoder.sol",
+        "./Periphery.sol",
+        "./packers/BufferPacker.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "PermissionChecker"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\Consumptions.sol": {
+      "lastModificationDate": 1724320417992,
+      "contentHash": "be5e3502f7db390ccb7eda60b60beaf5",
+      "sourceName": "contracts/Consumptions.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Consumptions"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\Core.sol": {
+      "lastModificationDate": 1724320417993,
+      "contentHash": "76bec4cb4a8d38cd52e866f868f98991",
+      "sourceName": "contracts/Core.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/zodiac/contracts/core/Modifier.sol",
+        "./Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Core"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\Decoder.sol": {
+      "lastModificationDate": 1724320417993,
+      "contentHash": "19d074ed2a019bade50f523ab343d2cd",
+      "sourceName": "contracts/Decoder.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Topology.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Decoder"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\packers\\BufferPacker.sol": {
+      "lastModificationDate": 1724320418011,
+      "contentHash": "e319a8ff86cc6a2956ab08304ce47a59",
+      "sourceName": "contracts/packers/BufferPacker.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "BufferPacker"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\Types.sol": {
+      "lastModificationDate": 1724320418003,
+      "contentHash": "b11b87191fb23a455b7c7a1d1854b615",
+      "sourceName": "contracts/Types.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": []
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\core\\Modifier.sol": {
+      "lastModificationDate": 1724348136720,
+      "contentHash": "92e76584b9bb923d2ba24dbb71ee3c2b",
+      "sourceName": "@gnosis.pm/zodiac/contracts/core/Modifier.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "../signature/ExecutionTracker.sol",
+        "../interfaces/IAvatar.sol",
+        "./Module.sol",
+        "../signature/SignatureChecker.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "Modifier"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\core\\Module.sol": {
+      "lastModificationDate": 1724348136720,
+      "contentHash": "18b06280572ff4651effdbfb102557f6",
+      "sourceName": "@gnosis.pm/zodiac/contracts/core/Module.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/safe-contracts/contracts/common/Enum.sol",
+        "../factory/FactoryFriendly.sol",
+        "../interfaces/IAvatar.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "Module"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\signature\\ExecutionTracker.sol": {
+      "lastModificationDate": 1724348136751,
+      "contentHash": "93e293faf4a22fa3227d95c43675b020",
+      "sourceName": "@gnosis.pm/zodiac/contracts/signature/ExecutionTracker.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0 <0.9.0"
+      ],
+      "artifacts": [
+        "ExecutionTracker"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\interfaces\\IAvatar.sol": {
+      "lastModificationDate": 1724348136735,
+      "contentHash": "03ec15fe4a0456cdcdf19cd95b2a8348",
+      "sourceName": "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/safe-contracts/contracts/common/Enum.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "IAvatar"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\signature\\SignatureChecker.sol": {
+      "lastModificationDate": 1724348136751,
+      "contentHash": "563e013cb7faeffaf88a6fac40552286",
+      "sourceName": "@gnosis.pm/zodiac/contracts/signature/SignatureChecker.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC1271.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.0 <0.9.0"
+      ],
+      "artifacts": [
+        "SignatureChecker"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\factory\\FactoryFriendly.sol": {
+      "lastModificationDate": 1724348136735,
+      "contentHash": "076d81c74d4af7a307bce839aafaa7c2",
+      "sourceName": "@gnosis.pm/zodiac/contracts/factory/FactoryFriendly.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "FactoryFriendly"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\signature\\IERC1271.sol": {
+      "lastModificationDate": 1724348136751,
+      "contentHash": "9fd6f34a1880b94f0526edb596c0df72",
+      "sourceName": "@gnosis.pm/zodiac/contracts/signature/IERC1271.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "IERC1271"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\Topology.sol": {
+      "lastModificationDate": 1724320418002,
+      "contentHash": "58209a4b801b6b1d6ef1d1249218a456",
+      "sourceName": "contracts/Topology.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Topology"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\Roles.sol": {
+      "lastModificationDate": 1724320418001,
+      "contentHash": "572fe2f4670b7f486894e156b2554161",
+      "sourceName": "contracts/Roles.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./AllowanceTracker.sol",
+        "./PermissionBuilder.sol",
+        "./PermissionChecker.sol",
+        "./PermissionLoader.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Roles"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\AllowanceTracker.sol": {
+      "lastModificationDate": 1724320417990,
+      "contentHash": "317aef30a9565b198bb85acaf88faef4",
+      "sourceName": "contracts/AllowanceTracker.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Core.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "AllowanceTracker"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\PermissionBuilder.sol": {
+      "lastModificationDate": 1724320417997,
+      "contentHash": "8cdaff0e49d4355205e412490455528d",
+      "sourceName": "contracts/PermissionBuilder.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Core.sol",
+        "./Integrity.sol",
+        "./packers/BufferPacker.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "PermissionBuilder"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\PermissionLoader.sol": {
+      "lastModificationDate": 1724320418000,
+      "contentHash": "a78f0d838303ed0670c702bdef248ac3",
+      "sourceName": "contracts/PermissionLoader.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/zodiac/contracts/core/Modifier.sol",
+        "./Consumptions.sol",
+        "./Core.sol",
+        "./Topology.sol",
+        "./WriteOnce.sol",
+        "./packers/Packer.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "PermissionLoader"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\Integrity.sol": {
+      "lastModificationDate": 1724320417994,
+      "contentHash": "4baf9adfcee3dca55a7bd384ebf79779",
+      "sourceName": "contracts/Integrity.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Topology.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Integrity"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\WriteOnce.sol": {
+      "lastModificationDate": 1724320418004,
+      "contentHash": "cb5f71842fee0990106fc2eaf7e7e98b",
+      "sourceName": "contracts/WriteOnce.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "ISingletonFactory",
+        "WriteOnce"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\packers\\Packer.sol": {
+      "lastModificationDate": 1724320418013,
+      "contentHash": "337028e19f908f9fbaeda9d06e4959ac",
+      "sourceName": "contracts/packers/Packer.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/zodiac/contracts/core/Modifier.sol",
+        "./BufferPacker.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "Packer"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\test\\MockIntegrity.sol": {
+      "lastModificationDate": 1724320418018,
+      "contentHash": "ac36b3d11d6000eacd62741ee2ce13a1",
+      "sourceName": "contracts/test/MockIntegrity.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Integrity.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "MockIntegrity"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\test\\MockConsumptions.sol": {
+      "lastModificationDate": 1724320418015,
+      "contentHash": "deb9afe44d486ae389ea1026c540a375",
+      "sourceName": "contracts/test/MockConsumptions.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Consumptions.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "MockConsumptions"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\test\\MockDecoder.sol": {
+      "lastModificationDate": 1724320418016,
+      "contentHash": "d58d8014e74c2d6c4a33c213921b7a89",
+      "sourceName": "contracts/test/MockDecoder.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Decoder.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "MockDecoder"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\adapters\\MultiSendUnwrapper.sol": {
+      "lastModificationDate": 1724320418007,
+      "contentHash": "19425164856708374b274f03855f8163",
+      "sourceName": "contracts/adapters/MultiSendUnwrapper.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Types.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "MultiSendUnwrapper"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\test\\MultiSend.sol": {
+      "lastModificationDate": 1724320418019,
+      "contentHash": "f085181a9b6c843f2f8fed446f5459f5",
+      "sourceName": "contracts/test/MultiSend.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.17 <0.9.0"
+      ],
+      "artifacts": [
+        "MultiSend"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\test\\TestAvatar.sol": {
+      "lastModificationDate": 1724320418020,
+      "contentHash": "c15beec61a98e1409f0ce62461aafae4",
+      "sourceName": "contracts/test/TestAvatar.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "TestAvatar"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\test\\TestContract.sol": {
+      "lastModificationDate": 1724320418021,
+      "contentHash": "9b81b83c3fa10de7550abb5e24b7b2a2",
+      "sourceName": "contracts/test/TestContract.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "TestContract"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\test\\TestEncoder.sol": {
+      "lastModificationDate": 1724320418024,
+      "contentHash": "9551a7b033f716fb9a2ac71f21fc7827",
+      "sourceName": "contracts/test/TestEncoder.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "TestEncoder"
+      ]
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\contracts\\test\\TestFactory.sol": {
+      "lastModificationDate": 1724320418024,
+      "contentHash": "7dc2c9e3a3cc2523eefd7e211c15482e",
+      "sourceName": "contracts/test/TestFactory.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/zodiac/contracts/factory/ModuleProxyFactory.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": []
+    },
+    "C:\\Users\\frawl\\OneDrive\\Desktop\\thirdguard\\evm\\node_modules\\@gnosis.pm\\zodiac\\contracts\\factory\\ModuleProxyFactory.sol": {
+      "lastModificationDate": 1724348136735,
+      "contentHash": "83271d192e0e48adee9c19f329517fb2",
+      "sourceName": "@gnosis.pm/zodiac/contracts/factory/ModuleProxyFactory.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "shanghai",
+          "optimizer": {
+            "enabled": true,
+            "runs": 100
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "ModuleProxyFactory"
+      ]
+    }
+  }
+}

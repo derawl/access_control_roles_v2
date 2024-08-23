@@ -1,0 +1,3769 @@
+{
+  "version": "3.4",
+  "log": [
+    {
+      "@gnosis.pm/safe-contracts/contracts/common/Enum.sol:Enum": {
+        "src": "@gnosis.pm\\safe-contracts\\contracts\\common\\Enum.sol:6",
+        "version": {
+          "withMetadata": "6ccb53cc9a56d4e33af4eb3e11e0d0ef49772fbd320fcea51840c4ff86a839f9",
+          "withoutMetadata": "6c4286b6f039205e151f7ee764fca9f4fb231284097cde1adc49b5e81c13a688",
+          "linkedWithoutMetadata": "6c4286b6f039205e151f7ee764fca9f4fb231284097cde1adc49b5e81c13a688"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@gnosis.pm/zodiac/contracts/core/Modifier.sol:Modifier": {
+        "src": "@gnosis.pm\\zodiac\\contracts\\core\\Modifier.sol:11",
+        "inherit": [
+          "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol:IAvatar",
+          "@gnosis.pm/zodiac/contracts/signature/SignatureChecker.sol:SignatureChecker",
+          "@gnosis.pm/zodiac/contracts/signature/ExecutionTracker.sol:ExecutionTracker",
+          "@gnosis.pm/zodiac/contracts/core/Module.sol:Module",
+          "@gnosis.pm/zodiac/contracts/factory/FactoryFriendly.sol:FactoryFriendly",
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable",
+          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "execTransactionFromModule(address,uint256,bytes,uint8)",
+          "execTransactionFromModuleReturnData(address,uint256,bytes,uint8)",
+          "disableModule(address,address)",
+          "enableModule(address)",
+          "isModuleEnabled(address)",
+          "getModulesPaginated(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "avatar",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:12"
+            },
+            {
+              "label": "target",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:14"
+            },
+            {
+              "label": "consumed",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_address,t_mapping(t_bytes32,t_bool))",
+              "contract": "ExecutionTracker",
+              "src": "@gnosis.pm\\zodiac\\contracts\\signature\\ExecutionTracker.sol:11"
+            },
+            {
+              "label": "modules",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_address)",
+              "contract": "Modifier",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Modifier.sol:19"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_struct(OwnableStorage)408_storage": {
+              "label": "struct OwnableUpgradeable.OwnableStorage",
+              "members": [
+                {
+                  "label": "_owner",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_address)": {
+              "label": "mapping(address => address)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes32,t_bool))": {
+              "label": "mapping(address => mapping(bytes32 => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bool)": {
+              "label": "mapping(bytes32 => bool)",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Ownable": [
+              {
+                "contract": "OwnableUpgradeable",
+                "label": "_owner",
+                "type": "t_address",
+                "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@gnosis.pm/zodiac/contracts/core/Module.sol:Module": {
+        "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:10",
+        "inherit": [
+          "@gnosis.pm/zodiac/contracts/factory/FactoryFriendly.sol:FactoryFriendly",
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable",
+          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "setAvatar(address)",
+          "setTarget(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "avatar",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:12"
+            },
+            {
+              "label": "target",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:14"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_struct(OwnableStorage)408_storage": {
+              "label": "struct OwnableUpgradeable.OwnableStorage",
+              "members": [
+                {
+                  "label": "_owner",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Ownable": [
+              {
+                "contract": "OwnableUpgradeable",
+                "label": "_owner",
+                "type": "t_address",
+                "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@gnosis.pm/zodiac/contracts/factory/FactoryFriendly.sol:FactoryFriendly": {
+        "src": "@gnosis.pm\\zodiac\\contracts\\factory\\FactoryFriendly.sol:8",
+        "inherit": [
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable",
+          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "setUp(bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_struct(OwnableStorage)408_storage": {
+              "label": "struct OwnableUpgradeable.OwnableStorage",
+              "members": [
+                {
+                  "label": "_owner",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Ownable": [
+              {
+                "contract": "OwnableUpgradeable",
+                "label": "_owner",
+                "type": "t_address",
+                "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@gnosis.pm/zodiac/contracts/factory/ModuleProxyFactory.sol:ModuleProxyFactory": {
+        "src": "@gnosis.pm\\zodiac\\contracts\\factory\\ModuleProxyFactory.sol:4",
+        "version": {
+          "withMetadata": "9717589b707a8fde32bde23b4fdf52671f2e4e976bbbbfa6efb076f7254414ce",
+          "withoutMetadata": "6c1856c9ea96a7f2c27f7cf18645e6b01b3a403e07f5b01bd4e4201550d1d825",
+          "linkedWithoutMetadata": "6c1856c9ea96a7f2c27f7cf18645e6b01b3a403e07f5b01bd4e4201550d1d825"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "deployModule(address,bytes,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol:IAvatar": {
+        "src": "@gnosis.pm\\zodiac\\contracts\\interfaces\\IAvatar.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "enableModule(address)",
+          "disableModule(address,address)",
+          "execTransactionFromModule(address,uint256,bytes,uint8)",
+          "execTransactionFromModuleReturnData(address,uint256,bytes,uint8)",
+          "isModuleEnabled(address)",
+          "getModulesPaginated(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@gnosis.pm/zodiac/contracts/signature/ExecutionTracker.sol:ExecutionTracker": {
+        "src": "@gnosis.pm\\zodiac\\contracts\\signature\\ExecutionTracker.sol:5",
+        "version": {
+          "withMetadata": "3c9c0ff9a7fc9269e42fd95a71d829269da672d384dc9c788ce30c1ced11fbc1",
+          "withoutMetadata": "22d4f09e4aadbc9f01dd74da60bf413187ee92392abbcec14810bc499d5263d8",
+          "linkedWithoutMetadata": "22d4f09e4aadbc9f01dd74da60bf413187ee92392abbcec14810bc499d5263d8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "invalidate(bytes32)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "consumed",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_mapping(t_address,t_mapping(t_bytes32,t_bool))",
+              "contract": "ExecutionTracker",
+              "src": "@gnosis.pm\\zodiac\\contracts\\signature\\ExecutionTracker.sol:11"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes32,t_bool))": {
+              "label": "mapping(address => mapping(bytes32 => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bool)": {
+              "label": "mapping(bytes32 => bool)",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@gnosis.pm/zodiac/contracts/signature/IERC1271.sol:IERC1271": {
+        "src": "@gnosis.pm\\zodiac\\contracts\\signature\\IERC1271.sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "isValidSignature(bytes32,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@gnosis.pm/zodiac/contracts/signature/SignatureChecker.sol:SignatureChecker": {
+        "src": "@gnosis.pm\\zodiac\\contracts\\signature\\SignatureChecker.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "moduleTxHash(bytes,bytes32)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21",
+        "inherit": [
+          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_struct(OwnableStorage)408_storage": {
+              "label": "struct OwnableUpgradeable.OwnableStorage",
+              "members": [
+                {
+                  "label": "_owner",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Ownable": [
+              {
+                "contract": "OwnableUpgradeable",
+                "label": "_owner",
+                "type": "t_address",
+                "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:56",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable": {
+        "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:17",
+        "inherit": [
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:IERC1155Errors": {
+        "src": "@openzeppelin\\contracts\\interfaces\\draft-IERC6093.sol:113",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:IERC20Errors": {
+        "src": "@openzeppelin\\contracts\\interfaces\\draft-IERC6093.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:IERC721Errors": {
+        "src": "@openzeppelin\\contracts\\interfaces\\draft-IERC6093.sol:55",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/token/ERC721/ERC721.sol:ERC721": {
+        "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:19",
+        "inherit": [
+          "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:IERC721Errors",
+          "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol:IERC721Metadata",
+          "@openzeppelin/contracts/token/ERC721/IERC721.sol:IERC721",
+          "@openzeppelin/contracts/utils/introspection/ERC165.sol:ERC165",
+          "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165",
+          "@openzeppelin/contracts/utils/Context.sol:Context"
+        ],
+        "libraries": [
+          "@openzeppelin/contracts/utils/Strings.sol:Strings"
+        ],
+        "methods": [
+          "supportsInterface(bytes4)",
+          "balanceOf(address)",
+          "ownerOf(uint256)",
+          "name()",
+          "symbol()",
+          "tokenURI(uint256)",
+          "approve(address,uint256)",
+          "getApproved(uint256)",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "transferFrom(address,address,uint256)",
+          "safeTransferFrom(address,address,uint256)",
+          "safeTransferFrom(address,address,uint256,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC721",
+            "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:39"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_string_storage",
+              "contract": "ERC721",
+              "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:23"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_string_storage",
+              "contract": "ERC721",
+              "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:26"
+            },
+            {
+              "label": "_owners",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_uint256,t_address)",
+              "contract": "ERC721",
+              "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:28"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC721",
+              "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:30"
+            },
+            {
+              "label": "_tokenApprovals",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_mapping(t_uint256,t_address)",
+              "contract": "ERC721",
+              "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:32"
+            },
+            {
+              "label": "_operatorApprovals",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "contract": "ERC721",
+              "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:34"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_address)": {
+              "label": "mapping(uint256 => address)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/token/ERC721/IERC721.sol:IERC721": {
+        "src": "@openzeppelin\\contracts\\token\\ERC721\\IERC721.sol:11",
+        "inherit": [
+          "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165"
+        ],
+        "libraries": [],
+        "methods": [
+          "balanceOf(address)",
+          "ownerOf(uint256)",
+          "safeTransferFrom(address,address,uint256,bytes)",
+          "safeTransferFrom(address,address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "approve(address,uint256)",
+          "setApprovalForAll(address,bool)",
+          "getApproved(uint256)",
+          "isApprovedForAll(address,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol:IERC721Receiver": {
+        "src": "@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol:11",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "onERC721Received(address,address,uint256,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol:IERC721Metadata": {
+        "src": "@openzeppelin\\contracts\\token\\ERC721\\extensions\\IERC721Metadata.sol:12",
+        "inherit": [
+          "@openzeppelin/contracts/token/ERC721/IERC721.sol:IERC721",
+          "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165"
+        ],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "tokenURI(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/utils/Context.sol:Context": {
+        "src": "@openzeppelin\\contracts\\utils\\Context.sol:16",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/utils/Strings.sol:Strings": {
+        "src": "@openzeppelin\\contracts\\utils\\Strings.sol:12",
+        "version": {
+          "withMetadata": "bcec1ffbb89446b8890952441fdfa7c0fb6af28800a2c3cb663e42f68850609b",
+          "withoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312",
+          "linkedWithoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312"
+        },
+        "inherit": [],
+        "libraries": [
+          "@openzeppelin/contracts/utils/math/Math.sol:Math",
+          "@openzeppelin/contracts/utils/math/SignedMath.sol:SignedMath"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/utils/introspection/ERC165.sol:ERC165": {
+        "src": "@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol:20",
+        "inherit": [
+          "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165"
+        ],
+        "libraries": [],
+        "methods": [
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165": {
+        "src": "@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol:15",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/utils/math/Math.sol:Math": {
+        "src": "@openzeppelin\\contracts\\utils\\math\\Math.sol:9",
+        "version": {
+          "withMetadata": "25f31136e0d11deefe6c752df03732a54aadde7a93ce5e7b67e64377c7bcdf9f",
+          "withoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312",
+          "linkedWithoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "@openzeppelin/contracts/utils/math/SignedMath.sol:SignedMath": {
+        "src": "@openzeppelin\\contracts\\utils\\math\\SignedMath.sol:9",
+        "version": {
+          "withMetadata": "c7fb71ed5c6d78f96d7a1886d4f2956ecd1bd54e3e3ccb1d070761eb091be6dd",
+          "withoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312",
+          "linkedWithoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/AllowanceTracker.sol:AllowanceTracker": {
+        "src": "contracts\\AllowanceTracker.sol:13",
+        "inherit": [
+          "contracts/Core.sol:Core",
+          "@gnosis.pm/zodiac/contracts/core/Modifier.sol:Modifier",
+          "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol:IAvatar",
+          "@gnosis.pm/zodiac/contracts/signature/SignatureChecker.sol:SignatureChecker",
+          "@gnosis.pm/zodiac/contracts/signature/ExecutionTracker.sol:ExecutionTracker",
+          "@gnosis.pm/zodiac/contracts/core/Module.sol:Module",
+          "@gnosis.pm/zodiac/contracts/factory/FactoryFriendly.sol:FactoryFriendly",
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable",
+          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "avatar",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:12"
+            },
+            {
+              "label": "target",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:14"
+            },
+            {
+              "label": "consumed",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_address,t_mapping(t_bytes32,t_bool))",
+              "contract": "ExecutionTracker",
+              "src": "@gnosis.pm\\zodiac\\contracts\\signature\\ExecutionTracker.sol:11"
+            },
+            {
+              "label": "modules",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_address)",
+              "contract": "Modifier",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Modifier.sol:19"
+            },
+            {
+              "label": "roles",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_mapping(t_bytes32,t_struct(Role)10574_storage)",
+              "contract": "Core",
+              "src": "contracts\\Core.sol:13"
+            },
+            {
+              "label": "allowances",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_mapping(t_bytes32,t_struct(Allowance)10586_storage)",
+              "contract": "Core",
+              "src": "contracts\\Core.sol:14"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_struct(OwnableStorage)408_storage": {
+              "label": "struct OwnableUpgradeable.OwnableStorage",
+              "members": [
+                {
+                  "label": "_owner",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_enum(Clearance)10520": {
+              "label": "enum Clearance",
+              "members": [
+                "None",
+                "Target",
+                "Function"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_enum(ExecutionOptions)10516": {
+              "label": "enum ExecutionOptions",
+              "members": [
+                "None",
+                "Send",
+                "DelegateCall",
+                "Both"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_address)": {
+              "label": "mapping(address => address)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes32,t_bool))": {
+              "label": "mapping(address => mapping(bytes32 => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_struct(TargetAddress)10560_storage)": {
+              "label": "mapping(address => struct TargetAddress)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bool)": {
+              "label": "mapping(bytes32 => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bytes32)": {
+              "label": "mapping(bytes32 => bytes32)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(Allowance)10586_storage)": {
+              "label": "mapping(bytes32 => struct Allowance)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(Role)10574_storage)": {
+              "label": "mapping(bytes32 => struct Role)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Allowance)10586_storage": {
+              "label": "struct Allowance",
+              "members": [
+                {
+                  "label": "refill",
+                  "type": "t_uint128",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "maxRefill",
+                  "type": "t_uint128",
+                  "offset": 16,
+                  "slot": "0"
+                },
+                {
+                  "label": "period",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint128",
+                  "offset": 8,
+                  "slot": "1"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint64",
+                  "offset": 24,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Role)10574_storage": {
+              "label": "struct Role",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "targets",
+                  "type": "t_mapping(t_address,t_struct(TargetAddress)10560_storage)",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "scopeConfig",
+                  "type": "t_mapping(t_bytes32,t_bytes32)",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_struct(TargetAddress)10560_storage": {
+              "label": "struct TargetAddress",
+              "members": [
+                {
+                  "label": "clearance",
+                  "type": "t_enum(Clearance)10520",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "options",
+                  "type": "t_enum(ExecutionOptions)10516",
+                  "offset": 1,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint128": {
+              "label": "uint128",
+              "numberOfBytes": "16"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Ownable": [
+              {
+                "contract": "OwnableUpgradeable",
+                "label": "_owner",
+                "type": "t_address",
+                "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/Consumptions.sol:Consumptions": {
+        "src": "contracts\\Consumptions.sol:11",
+        "version": {
+          "withMetadata": "2637ba4a785029d24f0b264e1e41c1943195e0fbdb43b60215f9f194f4ef843e",
+          "withoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312",
+          "linkedWithoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/Core.sol:Core": {
+        "src": "contracts\\Core.sol:12",
+        "inherit": [
+          "@gnosis.pm/zodiac/contracts/core/Modifier.sol:Modifier",
+          "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol:IAvatar",
+          "@gnosis.pm/zodiac/contracts/signature/SignatureChecker.sol:SignatureChecker",
+          "@gnosis.pm/zodiac/contracts/signature/ExecutionTracker.sol:ExecutionTracker",
+          "@gnosis.pm/zodiac/contracts/core/Module.sol:Module",
+          "@gnosis.pm/zodiac/contracts/factory/FactoryFriendly.sol:FactoryFriendly",
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable",
+          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "avatar",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:12"
+            },
+            {
+              "label": "target",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:14"
+            },
+            {
+              "label": "consumed",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_address,t_mapping(t_bytes32,t_bool))",
+              "contract": "ExecutionTracker",
+              "src": "@gnosis.pm\\zodiac\\contracts\\signature\\ExecutionTracker.sol:11"
+            },
+            {
+              "label": "modules",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_address)",
+              "contract": "Modifier",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Modifier.sol:19"
+            },
+            {
+              "label": "roles",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_mapping(t_bytes32,t_struct(Role)10574_storage)",
+              "contract": "Core",
+              "src": "contracts\\Core.sol:13"
+            },
+            {
+              "label": "allowances",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_mapping(t_bytes32,t_struct(Allowance)10586_storage)",
+              "contract": "Core",
+              "src": "contracts\\Core.sol:14"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_struct(OwnableStorage)408_storage": {
+              "label": "struct OwnableUpgradeable.OwnableStorage",
+              "members": [
+                {
+                  "label": "_owner",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_enum(Clearance)10520": {
+              "label": "enum Clearance",
+              "members": [
+                "None",
+                "Target",
+                "Function"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_enum(ExecutionOptions)10516": {
+              "label": "enum ExecutionOptions",
+              "members": [
+                "None",
+                "Send",
+                "DelegateCall",
+                "Both"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_address)": {
+              "label": "mapping(address => address)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes32,t_bool))": {
+              "label": "mapping(address => mapping(bytes32 => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_struct(TargetAddress)10560_storage)": {
+              "label": "mapping(address => struct TargetAddress)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bool)": {
+              "label": "mapping(bytes32 => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bytes32)": {
+              "label": "mapping(bytes32 => bytes32)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(Allowance)10586_storage)": {
+              "label": "mapping(bytes32 => struct Allowance)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(Role)10574_storage)": {
+              "label": "mapping(bytes32 => struct Role)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Allowance)10586_storage": {
+              "label": "struct Allowance",
+              "members": [
+                {
+                  "label": "refill",
+                  "type": "t_uint128",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "maxRefill",
+                  "type": "t_uint128",
+                  "offset": 16,
+                  "slot": "0"
+                },
+                {
+                  "label": "period",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint128",
+                  "offset": 8,
+                  "slot": "1"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint64",
+                  "offset": 24,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Role)10574_storage": {
+              "label": "struct Role",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "targets",
+                  "type": "t_mapping(t_address,t_struct(TargetAddress)10560_storage)",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "scopeConfig",
+                  "type": "t_mapping(t_bytes32,t_bytes32)",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_struct(TargetAddress)10560_storage": {
+              "label": "struct TargetAddress",
+              "members": [
+                {
+                  "label": "clearance",
+                  "type": "t_enum(Clearance)10520",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "options",
+                  "type": "t_enum(ExecutionOptions)10516",
+                  "offset": 1,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint128": {
+              "label": "uint128",
+              "numberOfBytes": "16"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Ownable": [
+              {
+                "contract": "OwnableUpgradeable",
+                "label": "_owner",
+                "type": "t_address",
+                "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/Decoder.sol:Decoder": {
+        "src": "contracts\\Decoder.sol:11",
+        "version": {
+          "withMetadata": "57f1ac7b8cc860490f6b25c5426ff90c643678c3fb6de67875048cc8844fe438",
+          "withoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312",
+          "linkedWithoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312"
+        },
+        "inherit": [],
+        "libraries": [
+          "contracts/Topology.sol:Topology"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/Integrity.sol:Integrity": {
+        "src": "contracts\\Integrity.sol:11",
+        "version": {
+          "withMetadata": "46e6b95c9a3d5d8d33c09622164c9b0ca75680bcb995daf3fbcfb513fba02490",
+          "withoutMetadata": "8c84bacd63c90a850bc93a005ee06ec623502b4bcfa65f1d6e95740044e2c195",
+          "linkedWithoutMetadata": "8c84bacd63c90a850bc93a005ee06ec623502b4bcfa65f1d6e95740044e2c195"
+        },
+        "inherit": [],
+        "libraries": [
+          "contracts/Topology.sol:Topology"
+        ],
+        "methods": [
+          "enforce(struct ConditionFlat[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/Periphery.sol:Periphery": {
+        "src": "contracts\\Periphery.sol:12",
+        "inherit": [
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable",
+          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "setTransactionUnwrapper(address,bytes4,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "unwrappers",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_mapping(t_bytes32,t_contract(ITransactionUnwrapper)11232)",
+              "contract": "Periphery",
+              "src": "contracts\\Periphery.sol:19"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_struct(OwnableStorage)408_storage": {
+              "label": "struct OwnableUpgradeable.OwnableStorage",
+              "members": [
+                {
+                  "label": "_owner",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_contract(ITransactionUnwrapper)11232": {
+              "label": "contract ITransactionUnwrapper",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_bytes32,t_contract(ITransactionUnwrapper)11232)": {
+              "label": "mapping(bytes32 => contract ITransactionUnwrapper)",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Ownable": [
+              {
+                "contract": "OwnableUpgradeable",
+                "label": "_owner",
+                "type": "t_address",
+                "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/PermissionBuilder.sol:PermissionBuilder": {
+        "src": "contracts\\PermissionBuilder.sol:16",
+        "inherit": [
+          "contracts/Core.sol:Core",
+          "@gnosis.pm/zodiac/contracts/core/Modifier.sol:Modifier",
+          "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol:IAvatar",
+          "@gnosis.pm/zodiac/contracts/signature/SignatureChecker.sol:SignatureChecker",
+          "@gnosis.pm/zodiac/contracts/signature/ExecutionTracker.sol:ExecutionTracker",
+          "@gnosis.pm/zodiac/contracts/core/Module.sol:Module",
+          "@gnosis.pm/zodiac/contracts/factory/FactoryFriendly.sol:FactoryFriendly",
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable",
+          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [
+          "contracts/Integrity.sol:Integrity",
+          "contracts/packers/BufferPacker.sol:BufferPacker"
+        ],
+        "methods": [
+          "allowTarget(bytes32,address,uint8)",
+          "revokeTarget(bytes32,address)",
+          "scopeTarget(bytes32,address)",
+          "allowFunction(bytes32,address,bytes4,uint8)",
+          "revokeFunction(bytes32,address,bytes4)",
+          "scopeFunction(bytes32,address,bytes4,struct ConditionFlat[],uint8)",
+          "setAllowance(bytes32,uint128,uint128,uint128,uint64,uint64)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "avatar",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:12"
+            },
+            {
+              "label": "target",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:14"
+            },
+            {
+              "label": "consumed",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_address,t_mapping(t_bytes32,t_bool))",
+              "contract": "ExecutionTracker",
+              "src": "@gnosis.pm\\zodiac\\contracts\\signature\\ExecutionTracker.sol:11"
+            },
+            {
+              "label": "modules",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_address)",
+              "contract": "Modifier",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Modifier.sol:19"
+            },
+            {
+              "label": "roles",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_mapping(t_bytes32,t_struct(Role)10574_storage)",
+              "contract": "Core",
+              "src": "contracts\\Core.sol:13"
+            },
+            {
+              "label": "allowances",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_mapping(t_bytes32,t_struct(Allowance)10586_storage)",
+              "contract": "Core",
+              "src": "contracts\\Core.sol:14"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_struct(OwnableStorage)408_storage": {
+              "label": "struct OwnableUpgradeable.OwnableStorage",
+              "members": [
+                {
+                  "label": "_owner",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_enum(Clearance)10520": {
+              "label": "enum Clearance",
+              "members": [
+                "None",
+                "Target",
+                "Function"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_enum(ExecutionOptions)10516": {
+              "label": "enum ExecutionOptions",
+              "members": [
+                "None",
+                "Send",
+                "DelegateCall",
+                "Both"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_address)": {
+              "label": "mapping(address => address)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes32,t_bool))": {
+              "label": "mapping(address => mapping(bytes32 => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_struct(TargetAddress)10560_storage)": {
+              "label": "mapping(address => struct TargetAddress)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bool)": {
+              "label": "mapping(bytes32 => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bytes32)": {
+              "label": "mapping(bytes32 => bytes32)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(Allowance)10586_storage)": {
+              "label": "mapping(bytes32 => struct Allowance)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(Role)10574_storage)": {
+              "label": "mapping(bytes32 => struct Role)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Allowance)10586_storage": {
+              "label": "struct Allowance",
+              "members": [
+                {
+                  "label": "refill",
+                  "type": "t_uint128",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "maxRefill",
+                  "type": "t_uint128",
+                  "offset": 16,
+                  "slot": "0"
+                },
+                {
+                  "label": "period",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint128",
+                  "offset": 8,
+                  "slot": "1"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint64",
+                  "offset": 24,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Role)10574_storage": {
+              "label": "struct Role",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "targets",
+                  "type": "t_mapping(t_address,t_struct(TargetAddress)10560_storage)",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "scopeConfig",
+                  "type": "t_mapping(t_bytes32,t_bytes32)",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_struct(TargetAddress)10560_storage": {
+              "label": "struct TargetAddress",
+              "members": [
+                {
+                  "label": "clearance",
+                  "type": "t_enum(Clearance)10520",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "options",
+                  "type": "t_enum(ExecutionOptions)10516",
+                  "offset": 1,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint128": {
+              "label": "uint128",
+              "numberOfBytes": "16"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Ownable": [
+              {
+                "contract": "OwnableUpgradeable",
+                "label": "_owner",
+                "type": "t_address",
+                "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/PermissionChecker.sol:PermissionChecker": {
+        "src": "contracts\\PermissionChecker.sol:20",
+        "inherit": [
+          "contracts/Periphery.sol:Periphery",
+          "contracts/Core.sol:Core",
+          "@gnosis.pm/zodiac/contracts/core/Modifier.sol:Modifier",
+          "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol:IAvatar",
+          "@gnosis.pm/zodiac/contracts/signature/SignatureChecker.sol:SignatureChecker",
+          "@gnosis.pm/zodiac/contracts/signature/ExecutionTracker.sol:ExecutionTracker",
+          "@gnosis.pm/zodiac/contracts/core/Module.sol:Module",
+          "@gnosis.pm/zodiac/contracts/factory/FactoryFriendly.sol:FactoryFriendly",
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable",
+          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [
+          "contracts/Decoder.sol:Decoder",
+          "contracts/Consumptions.sol:Consumptions",
+          "contracts/packers/BufferPacker.sol:BufferPacker"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "avatar",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:12"
+            },
+            {
+              "label": "target",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:14"
+            },
+            {
+              "label": "consumed",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_address,t_mapping(t_bytes32,t_bool))",
+              "contract": "ExecutionTracker",
+              "src": "@gnosis.pm\\zodiac\\contracts\\signature\\ExecutionTracker.sol:11"
+            },
+            {
+              "label": "modules",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_address)",
+              "contract": "Modifier",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Modifier.sol:19"
+            },
+            {
+              "label": "roles",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_mapping(t_bytes32,t_struct(Role)10574_storage)",
+              "contract": "Core",
+              "src": "contracts\\Core.sol:13"
+            },
+            {
+              "label": "allowances",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_mapping(t_bytes32,t_struct(Allowance)10586_storage)",
+              "contract": "Core",
+              "src": "contracts\\Core.sol:14"
+            },
+            {
+              "label": "unwrappers",
+              "offset": 0,
+              "slot": "6",
+              "type": "t_mapping(t_bytes32,t_contract(ITransactionUnwrapper)11232)",
+              "contract": "Periphery",
+              "src": "contracts\\Periphery.sol:19"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_struct(OwnableStorage)408_storage": {
+              "label": "struct OwnableUpgradeable.OwnableStorage",
+              "members": [
+                {
+                  "label": "_owner",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_contract(ITransactionUnwrapper)11232": {
+              "label": "contract ITransactionUnwrapper",
+              "numberOfBytes": "20"
+            },
+            "t_enum(Clearance)10520": {
+              "label": "enum Clearance",
+              "members": [
+                "None",
+                "Target",
+                "Function"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_enum(ExecutionOptions)10516": {
+              "label": "enum ExecutionOptions",
+              "members": [
+                "None",
+                "Send",
+                "DelegateCall",
+                "Both"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_address)": {
+              "label": "mapping(address => address)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes32,t_bool))": {
+              "label": "mapping(address => mapping(bytes32 => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_struct(TargetAddress)10560_storage)": {
+              "label": "mapping(address => struct TargetAddress)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bool)": {
+              "label": "mapping(bytes32 => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bytes32)": {
+              "label": "mapping(bytes32 => bytes32)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_contract(ITransactionUnwrapper)11232)": {
+              "label": "mapping(bytes32 => contract ITransactionUnwrapper)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(Allowance)10586_storage)": {
+              "label": "mapping(bytes32 => struct Allowance)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(Role)10574_storage)": {
+              "label": "mapping(bytes32 => struct Role)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Allowance)10586_storage": {
+              "label": "struct Allowance",
+              "members": [
+                {
+                  "label": "refill",
+                  "type": "t_uint128",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "maxRefill",
+                  "type": "t_uint128",
+                  "offset": 16,
+                  "slot": "0"
+                },
+                {
+                  "label": "period",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint128",
+                  "offset": 8,
+                  "slot": "1"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint64",
+                  "offset": 24,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Role)10574_storage": {
+              "label": "struct Role",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "targets",
+                  "type": "t_mapping(t_address,t_struct(TargetAddress)10560_storage)",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "scopeConfig",
+                  "type": "t_mapping(t_bytes32,t_bytes32)",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_struct(TargetAddress)10560_storage": {
+              "label": "struct TargetAddress",
+              "members": [
+                {
+                  "label": "clearance",
+                  "type": "t_enum(Clearance)10520",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "options",
+                  "type": "t_enum(ExecutionOptions)10516",
+                  "offset": 1,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint128": {
+              "label": "uint128",
+              "numberOfBytes": "16"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Ownable": [
+              {
+                "contract": "OwnableUpgradeable",
+                "label": "_owner",
+                "type": "t_address",
+                "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/PermissionLoader.sol:PermissionLoader": {
+        "src": "contracts\\PermissionLoader.sol:18",
+        "inherit": [
+          "contracts/Core.sol:Core",
+          "@gnosis.pm/zodiac/contracts/core/Modifier.sol:Modifier",
+          "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol:IAvatar",
+          "@gnosis.pm/zodiac/contracts/signature/SignatureChecker.sol:SignatureChecker",
+          "@gnosis.pm/zodiac/contracts/signature/ExecutionTracker.sol:ExecutionTracker",
+          "@gnosis.pm/zodiac/contracts/core/Module.sol:Module",
+          "@gnosis.pm/zodiac/contracts/factory/FactoryFriendly.sol:FactoryFriendly",
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable",
+          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [
+          "contracts/packers/Packer.sol:Packer",
+          "contracts/WriteOnce.sol:WriteOnce",
+          "contracts/packers/BufferPacker.sol:BufferPacker",
+          "contracts/Topology.sol:Topology",
+          "contracts/Consumptions.sol:Consumptions"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "avatar",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:12"
+            },
+            {
+              "label": "target",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:14"
+            },
+            {
+              "label": "consumed",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_address,t_mapping(t_bytes32,t_bool))",
+              "contract": "ExecutionTracker",
+              "src": "@gnosis.pm\\zodiac\\contracts\\signature\\ExecutionTracker.sol:11"
+            },
+            {
+              "label": "modules",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_address)",
+              "contract": "Modifier",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Modifier.sol:19"
+            },
+            {
+              "label": "roles",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_mapping(t_bytes32,t_struct(Role)10574_storage)",
+              "contract": "Core",
+              "src": "contracts\\Core.sol:13"
+            },
+            {
+              "label": "allowances",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_mapping(t_bytes32,t_struct(Allowance)10586_storage)",
+              "contract": "Core",
+              "src": "contracts\\Core.sol:14"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_struct(OwnableStorage)408_storage": {
+              "label": "struct OwnableUpgradeable.OwnableStorage",
+              "members": [
+                {
+                  "label": "_owner",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_enum(Clearance)10520": {
+              "label": "enum Clearance",
+              "members": [
+                "None",
+                "Target",
+                "Function"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_enum(ExecutionOptions)10516": {
+              "label": "enum ExecutionOptions",
+              "members": [
+                "None",
+                "Send",
+                "DelegateCall",
+                "Both"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_address)": {
+              "label": "mapping(address => address)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes32,t_bool))": {
+              "label": "mapping(address => mapping(bytes32 => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_struct(TargetAddress)10560_storage)": {
+              "label": "mapping(address => struct TargetAddress)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bool)": {
+              "label": "mapping(bytes32 => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bytes32)": {
+              "label": "mapping(bytes32 => bytes32)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(Allowance)10586_storage)": {
+              "label": "mapping(bytes32 => struct Allowance)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(Role)10574_storage)": {
+              "label": "mapping(bytes32 => struct Role)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Allowance)10586_storage": {
+              "label": "struct Allowance",
+              "members": [
+                {
+                  "label": "refill",
+                  "type": "t_uint128",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "maxRefill",
+                  "type": "t_uint128",
+                  "offset": 16,
+                  "slot": "0"
+                },
+                {
+                  "label": "period",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint128",
+                  "offset": 8,
+                  "slot": "1"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint64",
+                  "offset": 24,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Role)10574_storage": {
+              "label": "struct Role",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "targets",
+                  "type": "t_mapping(t_address,t_struct(TargetAddress)10560_storage)",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "scopeConfig",
+                  "type": "t_mapping(t_bytes32,t_bytes32)",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_struct(TargetAddress)10560_storage": {
+              "label": "struct TargetAddress",
+              "members": [
+                {
+                  "label": "clearance",
+                  "type": "t_enum(Clearance)10520",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "options",
+                  "type": "t_enum(ExecutionOptions)10516",
+                  "offset": 1,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint128": {
+              "label": "uint128",
+              "numberOfBytes": "16"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Ownable": [
+              {
+                "contract": "OwnableUpgradeable",
+                "label": "_owner",
+                "type": "t_address",
+                "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/Roles.sol:Roles": {
+        "src": "contracts\\Roles.sol:17",
+        "version": {
+          "withMetadata": "258e0106f31d86272f98441c50849c35fbc3b4222b24239ccd6a820c894c7311",
+          "withoutMetadata": "8ade314270a08c5885e92cf6a47b500db31f33f759c54c09962f10db22f11e37",
+          "linkedWithoutMetadata": "8ade314270a08c5885e92cf6a47b500db31f33f759c54c09962f10db22f11e37"
+        },
+        "inherit": [
+          "contracts/PermissionLoader.sol:PermissionLoader",
+          "contracts/PermissionChecker.sol:PermissionChecker",
+          "contracts/Periphery.sol:Periphery",
+          "contracts/PermissionBuilder.sol:PermissionBuilder",
+          "contracts/AllowanceTracker.sol:AllowanceTracker",
+          "contracts/Core.sol:Core",
+          "@gnosis.pm/zodiac/contracts/core/Modifier.sol:Modifier",
+          "@gnosis.pm/zodiac/contracts/interfaces/IAvatar.sol:IAvatar",
+          "@gnosis.pm/zodiac/contracts/signature/SignatureChecker.sol:SignatureChecker",
+          "@gnosis.pm/zodiac/contracts/signature/ExecutionTracker.sol:ExecutionTracker",
+          "@gnosis.pm/zodiac/contracts/core/Module.sol:Module",
+          "@gnosis.pm/zodiac/contracts/factory/FactoryFriendly.sol:FactoryFriendly",
+          "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:OwnableUpgradeable",
+          "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "(address,address,address)",
+          "setUp(bytes)",
+          "assignRoles(address,bytes32[],bool[])",
+          "setDefaultRole(address,bytes32)",
+          "execTransactionFromModule(address,uint256,bytes,uint8)",
+          "execTransactionFromModuleReturnData(address,uint256,bytes,uint8)",
+          "execTransactionWithRole(address,uint256,bytes,uint8,bytes32,bool)",
+          "execTransactionWithRoleReturnData(address,uint256,bytes,uint8,bytes32,bool)"
+        ],
+        "linkReferences": [
+          {
+            "src": "contracts/Integrity.sol",
+            "name": "Integrity",
+            "length": 20,
+            "start": 3942,
+            "placeholder": "__$2cd9b773a3c3e0b461f7ad54b09f46e6ae$__"
+          },
+          {
+            "src": "contracts/packers/Packer.sol",
+            "name": "Packer",
+            "length": 20,
+            "start": 8737,
+            "placeholder": "__$1416e18a31f8412bde5440018f19e21267$__"
+          }
+        ],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Roles",
+            "src": "contracts\\Roles.sol:43"
+          },
+          {
+            "kind": "external-library-linking",
+            "name": "Integrity",
+            "src": "contracts/Integrity.sol"
+          },
+          {
+            "kind": "external-library-linking",
+            "name": "Packer",
+            "src": "contracts/packers/Packer.sol"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "avatar",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:12"
+            },
+            {
+              "label": "target",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_address",
+              "contract": "Module",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Module.sol:14"
+            },
+            {
+              "label": "consumed",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_address,t_mapping(t_bytes32,t_bool))",
+              "contract": "ExecutionTracker",
+              "src": "@gnosis.pm\\zodiac\\contracts\\signature\\ExecutionTracker.sol:11"
+            },
+            {
+              "label": "modules",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_address)",
+              "contract": "Modifier",
+              "src": "@gnosis.pm\\zodiac\\contracts\\core\\Modifier.sol:19"
+            },
+            {
+              "label": "roles",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_mapping(t_bytes32,t_struct(Role)10574_storage)",
+              "contract": "Core",
+              "src": "contracts\\Core.sol:13"
+            },
+            {
+              "label": "allowances",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_mapping(t_bytes32,t_struct(Allowance)10586_storage)",
+              "contract": "Core",
+              "src": "contracts\\Core.sol:14"
+            },
+            {
+              "label": "unwrappers",
+              "offset": 0,
+              "slot": "6",
+              "type": "t_mapping(t_bytes32,t_contract(ITransactionUnwrapper)11232)",
+              "contract": "Periphery",
+              "src": "contracts\\Periphery.sol:19"
+            },
+            {
+              "label": "defaultRoles",
+              "offset": 0,
+              "slot": "7",
+              "type": "t_mapping(t_address,t_bytes32)",
+              "contract": "Roles",
+              "src": "contracts\\Roles.sol:24"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_struct(InitializableStorage)475_storage": {
+              "label": "struct Initializable.InitializableStorage",
+              "members": [
+                {
+                  "label": "_initialized",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_initializing",
+                  "type": "t_bool",
+                  "offset": 8,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_struct(OwnableStorage)408_storage": {
+              "label": "struct OwnableUpgradeable.OwnableStorage",
+              "members": [
+                {
+                  "label": "_owner",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint64": {
+              "label": "uint64",
+              "numberOfBytes": "8"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_contract(ITransactionUnwrapper)11232": {
+              "label": "contract ITransactionUnwrapper",
+              "numberOfBytes": "20"
+            },
+            "t_enum(Clearance)10520": {
+              "label": "enum Clearance",
+              "members": [
+                "None",
+                "Target",
+                "Function"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_enum(ExecutionOptions)10516": {
+              "label": "enum ExecutionOptions",
+              "members": [
+                "None",
+                "Send",
+                "DelegateCall",
+                "Both"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_address)": {
+              "label": "mapping(address => address)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_bytes32)": {
+              "label": "mapping(address => bytes32)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes32,t_bool))": {
+              "label": "mapping(address => mapping(bytes32 => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_struct(TargetAddress)10560_storage)": {
+              "label": "mapping(address => struct TargetAddress)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bool)": {
+              "label": "mapping(bytes32 => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_bytes32)": {
+              "label": "mapping(bytes32 => bytes32)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_contract(ITransactionUnwrapper)11232)": {
+              "label": "mapping(bytes32 => contract ITransactionUnwrapper)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(Allowance)10586_storage)": {
+              "label": "mapping(bytes32 => struct Allowance)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(Role)10574_storage)": {
+              "label": "mapping(bytes32 => struct Role)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Allowance)10586_storage": {
+              "label": "struct Allowance",
+              "members": [
+                {
+                  "label": "refill",
+                  "type": "t_uint128",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "maxRefill",
+                  "type": "t_uint128",
+                  "offset": 16,
+                  "slot": "0"
+                },
+                {
+                  "label": "period",
+                  "type": "t_uint64",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint128",
+                  "offset": 8,
+                  "slot": "1"
+                },
+                {
+                  "label": "timestamp",
+                  "type": "t_uint64",
+                  "offset": 24,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Role)10574_storage": {
+              "label": "struct Role",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "targets",
+                  "type": "t_mapping(t_address,t_struct(TargetAddress)10560_storage)",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "scopeConfig",
+                  "type": "t_mapping(t_bytes32,t_bytes32)",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_struct(TargetAddress)10560_storage": {
+              "label": "struct TargetAddress",
+              "members": [
+                {
+                  "label": "clearance",
+                  "type": "t_enum(Clearance)10520",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "options",
+                  "type": "t_enum(ExecutionOptions)10516",
+                  "offset": 1,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_uint128": {
+              "label": "uint128",
+              "numberOfBytes": "16"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {
+            "erc7201:openzeppelin.storage.Ownable": [
+              {
+                "contract": "OwnableUpgradeable",
+                "label": "_owner",
+                "type": "t_address",
+                "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "erc7201:openzeppelin.storage.Initializable": [
+              {
+                "contract": "Initializable",
+                "label": "_initialized",
+                "type": "t_uint64",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "contract": "Initializable",
+                "label": "_initializing",
+                "type": "t_bool",
+                "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+                "offset": 8,
+                "slot": "0"
+              }
+            ]
+          }
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/Topology.sol:Topology": {
+        "src": "contracts\\Topology.sol:11",
+        "version": {
+          "withMetadata": "5604e673eef60f3dea9e890b7e771d7aa309b7c1b3243a746436f51231d50cfc",
+          "withoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312",
+          "linkedWithoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/WriteOnce.sol:ISingletonFactory": {
+        "src": "contracts\\WriteOnce.sol:4",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "deploy(bytes,bytes32)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/WriteOnce.sol:WriteOnce": {
+        "src": "contracts\\WriteOnce.sol:11",
+        "version": {
+          "withMetadata": "0ad05b23a819987560a73df8392f5c7b32f98d0ce1304d715860b18e70cc044e",
+          "withoutMetadata": "2fe27d8d29e1101b3325ba2c40f28e1c8ad7c709b393ba82b5a2a5b829ddb814",
+          "linkedWithoutMetadata": "2fe27d8d29e1101b3325ba2c40f28e1c8ad7c709b393ba82b5a2a5b829ddb814"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/adapters/AvatarIsOwnerOfERC721.sol:AvatarIsOwnerOfERC721": {
+        "src": "contracts\\adapters\\AvatarIsOwnerOfERC721.sol:13",
+        "version": {
+          "withMetadata": "21bff6f6dd7864d614cdf7c56eb3145d54db135c3e9e1b0cdbde1a9cedb986c4",
+          "withoutMetadata": "dfb5d2aa19a3c6f3ee5ad5fc85572efeccb54f31db06ed9ded9505b330b82caf",
+          "linkedWithoutMetadata": "dfb5d2aa19a3c6f3ee5ad5fc85572efeccb54f31db06ed9ded9505b330b82caf"
+        },
+        "inherit": [
+          "contracts/adapters/Types.sol:ICustomCondition"
+        ],
+        "libraries": [],
+        "methods": [
+          "check(address,uint256,bytes,uint8,uint256,uint256,bytes12)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/adapters/AvatarIsOwnerOfERC721.sol:IModifier": {
+        "src": "contracts\\adapters\\AvatarIsOwnerOfERC721.sol:7",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "avatar()",
+          "target()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/adapters/MultiSendUnwrapper.sol:MultiSendUnwrapper": {
+        "src": "contracts\\adapters\\MultiSendUnwrapper.sol:6",
+        "version": {
+          "withMetadata": "5cb9695c7e80ecf49b4c7a7c4cdb11f00eb6992d917b759268268ed3bf2090d7",
+          "withoutMetadata": "c182a3c885441c5fb3ff5a013388caaebce195f187d7757544ef97d31f8665a3",
+          "linkedWithoutMetadata": "c182a3c885441c5fb3ff5a013388caaebce195f187d7757544ef97d31f8665a3"
+        },
+        "inherit": [
+          "contracts/adapters/Types.sol:ITransactionUnwrapper"
+        ],
+        "libraries": [],
+        "methods": [
+          "unwrap(address,uint256,bytes,uint8)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/adapters/Types.sol:ICustomCondition": {
+        "src": "contracts\\adapters\\Types.sol:28",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "check(address,uint256,bytes,uint8,uint256,uint256,bytes12)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/adapters/Types.sol:IMultiSend": {
+        "src": "contracts\\adapters\\Types.sol:6",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "multiSend(bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/adapters/Types.sol:ITransactionUnwrapper": {
+        "src": "contracts\\adapters\\Types.sol:19",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "unwrap(address,uint256,bytes,uint8)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/packers/BufferPacker.sol:BufferPacker": {
+        "src": "contracts\\packers\\BufferPacker.sol:12",
+        "version": {
+          "withMetadata": "5f391291ff8b21e133ef21b89fb83ce716c7c5328f8f6d1496f8e10173d6b148",
+          "withoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312",
+          "linkedWithoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/packers/Packer.sol:Packer": {
+        "src": "contracts\\packers\\Packer.sol:13",
+        "version": {
+          "withMetadata": "3375407219d6e5ccc09de58484d48f5d8c4752d19695b8e2ee128d11f27dc2ec",
+          "withoutMetadata": "57245b576a7bb7098c0f48c49e16df4aebcb6f3e694bcd283f7d0e7a2ee88798",
+          "linkedWithoutMetadata": "57245b576a7bb7098c0f48c49e16df4aebcb6f3e694bcd283f7d0e7a2ee88798"
+        },
+        "inherit": [],
+        "libraries": [
+          "contracts/packers/BufferPacker.sol:BufferPacker"
+        ],
+        "methods": [
+          "pack(struct ConditionFlat[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/test/MockConsumptions.sol:MockConsumptions": {
+        "src": "contracts\\test\\MockConsumptions.sol:6",
+        "version": {
+          "withMetadata": "9d16dee1e70136dbaa6c112929966972169b8dedc87236430692b2f2f3db274a",
+          "withoutMetadata": "7d38d7a7749be41ff693b76c7a5cc89de789fb0482dc3bf096f6c0f0a7d90480",
+          "linkedWithoutMetadata": "7d38d7a7749be41ff693b76c7a5cc89de789fb0482dc3bf096f6c0f0a7d90480"
+        },
+        "inherit": [],
+        "libraries": [
+          "contracts/Consumptions.sol:Consumptions"
+        ],
+        "methods": [
+          "merge(struct Consumption[],struct Consumption[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/test/MockDecoder.sol:MockDecoder": {
+        "src": "contracts\\test\\MockDecoder.sol:6",
+        "version": {
+          "withMetadata": "b6183d864fb942b3f408b0bfa78522d5523843f4e1917430d482505113e3bbb6",
+          "withoutMetadata": "15e17be155bc8f91929c77fbcf320b12a0f817cbdce70f2864f6b47650b5deba",
+          "linkedWithoutMetadata": "15e17be155bc8f91929c77fbcf320b12a0f817cbdce70f2864f6b47650b5deba"
+        },
+        "inherit": [],
+        "libraries": [
+          "contracts/Decoder.sol:Decoder"
+        ],
+        "methods": [
+          "inspect(bytes,(uint8,uint8,struct MockDecoder.IN2[]))",
+          "pluck(bytes,uint256,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/test/MockERC721.sol:MockERC721": {
+        "src": "contracts\\test\\MockERC721.sol:7",
+        "version": {
+          "withMetadata": "b2940fab23220ec81dea4ccb7a5e55bf5d314057631c8afa5295be2bf17cc521",
+          "withoutMetadata": "f3dc0fd5014601699588b9c6dcc1a8c6960f5310cfe90c81189b191beb692812",
+          "linkedWithoutMetadata": "f3dc0fd5014601699588b9c6dcc1a8c6960f5310cfe90c81189b191beb692812"
+        },
+        "inherit": [
+          "@openzeppelin/contracts/token/ERC721/ERC721.sol:ERC721",
+          "@openzeppelin/contracts/interfaces/draft-IERC6093.sol:IERC721Errors",
+          "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol:IERC721Metadata",
+          "@openzeppelin/contracts/token/ERC721/IERC721.sol:IERC721",
+          "@openzeppelin/contracts/utils/introspection/ERC165.sol:ERC165",
+          "@openzeppelin/contracts/utils/introspection/IERC165.sol:IERC165",
+          "@openzeppelin/contracts/utils/Context.sol:Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "()",
+          "mint(address,uint256)",
+          "doSomething(uint256,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "MockERC721",
+            "src": "contracts\\test\\MockERC721.sol:8"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_string_storage",
+              "contract": "ERC721",
+              "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:23"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_string_storage",
+              "contract": "ERC721",
+              "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:26"
+            },
+            {
+              "label": "_owners",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_uint256,t_address)",
+              "contract": "ERC721",
+              "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:28"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC721",
+              "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:30"
+            },
+            {
+              "label": "_tokenApprovals",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_mapping(t_uint256,t_address)",
+              "contract": "ERC721",
+              "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:32"
+            },
+            {
+              "label": "_operatorApprovals",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "contract": "ERC721",
+              "src": "@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol:34"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_address)": {
+              "label": "mapping(uint256 => address)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/test/MockIntegrity.sol:MockIntegrity": {
+        "src": "contracts\\test\\MockIntegrity.sol:6",
+        "version": {
+          "withMetadata": "57ec183aaa87f4c5741513a14168001c003edc05632306efffa1845a5105ebc4",
+          "withoutMetadata": "335c483e630cee18fc9dbe017ea72b3d5e53baeebe417c5c23dcbe6da2e2be97",
+          "linkedWithoutMetadata": "335c483e630cee18fc9dbe017ea72b3d5e53baeebe417c5c23dcbe6da2e2be97"
+        },
+        "inherit": [],
+        "libraries": [
+          "contracts/Integrity.sol:Integrity"
+        ],
+        "methods": [
+          "enforce(struct ConditionFlat[])"
+        ],
+        "linkReferences": [
+          {
+            "src": "contracts/Integrity.sol",
+            "name": "Integrity",
+            "length": 20,
+            "start": 110,
+            "placeholder": "__$2cd9b773a3c3e0b461f7ad54b09f46e6ae$__"
+          }
+        ],
+        "errors": [
+          {
+            "kind": "external-library-linking",
+            "name": "Integrity",
+            "src": "contracts/Integrity.sol"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/test/MultiSend.sol:MultiSend": {
+        "src": "contracts\\test\\MultiSend.sol:9",
+        "version": {
+          "withMetadata": "999331ee33159d6c04da1588b4741e8ef223c6b37f930ad6b3de0f9fb5d6c5e6",
+          "withoutMetadata": "9a0e158db515663f3ab0f300882ff5f83105d26b481192bf2f38b1f4a0d0c590",
+          "linkedWithoutMetadata": "9a0e158db515663f3ab0f300882ff5f83105d26b481192bf2f38b1f4a0d0c590"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "()",
+          "multiSend(bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "MultiSend",
+            "src": "contracts\\test\\MultiSend.sol:12"
+          },
+          {
+            "kind": "state-variable-immutable",
+            "name": "multisendSingleton",
+            "src": "contracts\\test\\MultiSend.sol:10"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/test/TestAvatar.sol:TestAvatar": {
+        "src": "contracts\\test\\TestAvatar.sol:4",
+        "version": {
+          "withMetadata": "76196d6fb18045a3f866adeffbcca49fa9e47204486dd1cd43bd102e33be4176",
+          "withoutMetadata": "6e419614bf2b04e734ab734a1e7e59ced34d13e7d00ccd41ecbc96b4c4893a82",
+          "linkedWithoutMetadata": "6e419614bf2b04e734ab734a1e7e59ced34d13e7d00ccd41ecbc96b4c4893a82"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "()",
+          "exec(address payable,uint256,bytes,uint8)",
+          "execTransactionFromModule(address payable,uint256,bytes,uint8)",
+          "execTransactionFromModuleReturnData(address,uint256,bytes,uint8)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "contracts\\test\\TestAvatar.sol:15"
+          },
+          {
+            "kind": "delegatecall",
+            "src": "contracts\\test\\TestAvatar.sol:30"
+          },
+          {
+            "kind": "delegatecall",
+            "src": "contracts\\test\\TestAvatar.sol:40"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/test/TestContract.sol:TestContract": {
+        "src": "contracts\\test\\TestContract.sol:4",
+        "version": {
+          "withMetadata": "fe3414ebd8061fe06fb5aba66a43379c7a2ea5d66f880ab30f3f03a15ace3479",
+          "withoutMetadata": "a8ffcf0549eeceea47138c4091dda43af24635b8e563b780e35bb97772ace051",
+          "linkedWithoutMetadata": "a8ffcf0549eeceea47138c4091dda43af24635b8e563b780e35bb97772ace051"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "()",
+          "receiveEthAndDoNothing()",
+          "mint(address,uint256)",
+          "testDynamic(string,uint256,string,bool,uint8,string,string)",
+          "doNothing()",
+          "doEvenLess()",
+          "setAStorageNumber(uint16)",
+          "fnWithSingleParam(uint256)",
+          "fnWithTwoParams(uint256,uint256)",
+          "fnWithTwoMixedParams(bool,string)",
+          "fnWithThreeParams(uint256,uint256,uint256)",
+          "fnThatReverts()",
+          "fnThatMaybeReverts(uint256,bool)",
+          "emitTheSender()",
+          "dynamicDynamic32(string,bytes2[])",
+          "dynamic(bytes)",
+          "dynamic32(bytes4[])",
+          "dynamicString(string)",
+          "oneParamStatic(uint256)",
+          "oneParamUintWord(uint256)",
+          "oneParamUintSmall(uint8)",
+          "oneParamIntWord(int256)",
+          "oneParamIntSmall(int8)",
+          "oneParamBytesWord(bytes32)",
+          "oneParamBytesSmall(bytes1)",
+          "oneParamBytes(bytes)",
+          "oneParamString(string)",
+          "oneParamAddress(address)",
+          "oneParamStaticTuple((uint256,bool))",
+          "oneParamStaticNestedTuple((uint256,(uint256,bool)))",
+          "oneParamDynamicTuple((uint256,bytes))",
+          "oneParamDynamicNestedTuple((uint256,(uint256,bytes)))",
+          "oneParamArrayOfStatic(uint256[])",
+          "oneParamArrayOfStaticTuple(struct TestContract.StaticTuple[])",
+          "oneParamArrayOfDynamicTuple(struct TestContract.DynamicTuple[])",
+          "twoParamsStatic(uint256,uint256)",
+          "twoParamsStaticTupleStatic((uint256,bool),uint256)",
+          "spendAndMaybeRevert(uint256,bool)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "aStorageNumber",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint16",
+              "contract": "TestContract",
+              "src": "contracts\\test\\TestContract.sol:67"
+            }
+          ],
+          "types": {
+            "t_uint16": {
+              "label": "uint16",
+              "numberOfBytes": "2"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/test/TestCustomChecker.sol:TestCustomChecker": {
+        "src": "contracts\\test\\TestCustomChecker.sol:6",
+        "version": {
+          "withMetadata": "f6ea6efe1d84474bfd378eb3575060e377541a37b5b4d8dc7aaf3ccfb2bbf31f",
+          "withoutMetadata": "2d5c5a7297bfcddd74705d00cddc2ff0b71deb100d1ad5227212ea69b9230947",
+          "linkedWithoutMetadata": "2d5c5a7297bfcddd74705d00cddc2ff0b71deb100d1ad5227212ea69b9230947"
+        },
+        "inherit": [
+          "contracts/adapters/Types.sol:ICustomCondition"
+        ],
+        "libraries": [],
+        "methods": [
+          "check(address,uint256,bytes,uint8,uint256,uint256,bytes12)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      },
+      "contracts/test/TestEncoder.sol:TestEncoder": {
+        "src": "contracts\\test\\TestEncoder.sol:4",
+        "version": {
+          "withMetadata": "8a5e441b9dd99271a7777d61aad5d344fdef19930fde837ccf635bc72b5f6d0f",
+          "withoutMetadata": "d940b3d9ae6e506e9f04edc1c3c9646d7cdf46b79d8e6cc55e769590f524d158",
+          "linkedWithoutMetadata": "d940b3d9ae6e506e9f04edc1c3c9646d7cdf46b79d8e6cc55e769590f524d158"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "simple(uint256)",
+          "staticFn(bytes4)",
+          "staticDynamic(uint256,bytes)",
+          "dynamic(bytes)",
+          "dynamicArray(bytes[])",
+          "staticDynamicDynamic32(address,bytes,uint32[])",
+          "dynamicStaticDynamic32(bytes,bool,bytes2[])",
+          "dynamic32DynamicStatic(bytes2[],string,uint32)",
+          "dynamicTuple((bytes,uint256,uint256[]))",
+          "multiDynamicTuple((bytes,uint256,bytes,uint256[]))",
+          "_dynamicTuple((bytes))",
+          "staticTuple((uint256,address),uint256)",
+          "dynamicTupleWithNestedStaticTuple((uint256,bytes,(uint256,address)))",
+          "dynamicTupleWithNestedDynamicTuple((bytes,(uint256,address),uint256,(bytes,uint256,uint256[])))",
+          "dynamicTupleWithNestedArray((uint256,bytes,struct TestEncoder.StaticTuple[]))",
+          "arrayStaticTupleItems(struct TestEncoder.StaticTuple[])",
+          "arrayDynamicTupleItems(struct TestEncoder.DynamicTuple[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.21"
+      }
+    }
+  ]
+}
